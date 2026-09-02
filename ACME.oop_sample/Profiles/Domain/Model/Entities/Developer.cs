@@ -1,6 +1,16 @@
-﻿namespace ACME.oop_sample.Profiles.Domain.Model.Entities;
+﻿using ACME.oop_sample.Profiles.Domain.Model.ValueObjects;
 
-public class Developer
+namespace ACME.oop_sample.Profiles.Domain.Model.Entities;
+
+public class Developer (PersonName name)
 {
+    public Guid Id { get; }  = Guid.NewGuid();
+
+    public PersonName Name { get; } = name;
     
+    public Developer(string firstName, string lastName) : this (new PersonName(firstName, lastName)) {}
+    
+    public string GetFullName() => Name.FullName;
+
+    public bool IsAnyNameEmpty => Name.IsAnyNameEmpty;
 }
