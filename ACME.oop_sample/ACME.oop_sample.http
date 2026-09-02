@@ -1,0 +1,6 @@
+@ACME.oop_sample_HostAddress = http://localhost:5238
+
+GET {{ACME.oop_sample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
