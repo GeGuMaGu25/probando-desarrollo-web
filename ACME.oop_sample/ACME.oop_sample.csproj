@@ -15,4 +15,9 @@
         <PackageReference Include="Scalar.AspNetCore" Version="2.16.20"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Profiles\Domain\Services\" />
+      <Folder Include="Profiles\Interfaces\Rest\" />
+    </ItemGroup>
+
 </Project>
